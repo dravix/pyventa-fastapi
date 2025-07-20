@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Main</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4d4d4;
+            color: #333;
+        }
+
+        main.container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px 0 0 0;
+            width: 560px
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+
+        .flex .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .container .col-2 {
+            flex-direction: row;
+            width: 250px;
+        }
+
+        .container .col-3 {
+            flex-direction: row;
+            width: 180px;
+        }
+
+        .text-center {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1d2e50;
+            color: aliceblue;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: small;
+        }
+
+        .footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+            color: rgb(11, 35, 55);
+        }
+
+        .bg-gray-100 {
+            background-color: #ededed;
+            color: rgb(11, 35, 55);
+        }
+
+        .px-4 {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        .details {
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #f8f9fa;
+            color: #333;
+
+            strong {
+                color: #2c3e50;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="px-4 flex">
+            <div class="flex">
+                <img src="https://pub-3a53a1d5542843cda3f2373ee096f021.r2.dev/pyventa-logo.svg" alt="Pyventa Logo"
+                    style="width: 100px; height: auto;">
+            </div>
+            <div class="col text-center">
+                <h1>Welcome to Pyventa!</h1>
+                <h3>Let's get you started.</h3>
+            </div>
+            <div>
+                <p>
+                    Hello {{ first_name }} {{ last_name }},<br>
+                    Please verify your email address to complete your registration and start using your account.
+                </p>
+            </div>
+            <div class="col-2 bg-gray-100 px-4 details">
+                <p>
+                    <a href="{{ verification_url }}">Click here </a> to verify your email address.<br>
+                    <strong>Or copy paste the following Link:</strong> {{ verification_url }}<br>
+                </p>
+
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                If you have any questions or need assistance, please feel free to contact us at
+                <a href="mailto:support@pyventa.com">support@pyventa.com</a>.
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>
